@@ -1,0 +1,27 @@
+{
+  "name": "family-digest-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Family Telegram digest bot — reminders, media ingest, channel publish",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "db:migrate:local": "wrangler d1 migrations apply family-digest-bot --local",
+    "db:migrate:remote": "wrangler d1 migrations apply family-digest-bot --remote",
+    "typecheck": "tsc --noEmit",
+    "tg:me": "node scripts/telegram.mjs me",
+    "tg:webhook-info": "node scripts/telegram.mjs webhook-info",
+    "tg:channel-check": "node scripts/telegram.mjs channel-check",
+    "tg:test-post": "node scripts/telegram.mjs test-post",
+    "tg:set-webhook": "node scripts/telegram.mjs set-webhook",
+    "tg:delete-webhook": "node scripts/telegram.mjs delete-webhook",
+    "tg:set-commands": "node scripts/telegram.mjs set-commands"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250803.0",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.28.0"
+  }
+}

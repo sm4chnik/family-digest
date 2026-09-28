@@ -1,0 +1,18 @@
+name = "family-digest-bot"
+main = "src/index.ts"
+compatibility_date = "2025-08-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+# After `npx wrangler d1 create family-digest-bot`, paste the printed UUID below.
+[[d1_databases]]
+binding = "DB"
+database_name = "family-digest-bot"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["* * * * *"]
+
+# Secrets (never commit): BOT_TOKEN, WEBHOOK_SECRET, ADMIN_IDS, CHANNEL_ID.
+# Local: .dev.vars. Production: `npx wrangler secret put <NAME>`.

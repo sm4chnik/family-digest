@@ -1,0 +1,6 @@
+# Copy to .dev.vars for local `wrangler dev` (never commit .dev.vars)
+
+BOT_TOKEN=123456:replace-me
+WEBHOOK_SECRET=generate-a-long-random-string
+ADMIN_IDS=123456789
+CHANNEL_ID=-1001234567890
